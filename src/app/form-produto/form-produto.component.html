@@ -1,0 +1,45 @@
+<form (ngSubmit)="OnSubmit()" class="row g-3">
+    <!--Título Inicial-->
+    <div class="row g-3">
+  
+      <h3 class="Title" style="margin: 10px;">Cadastro de Produtos</h3>
+  
+      <div class="col-md-1" style="margin: 10px;">
+        <label for="inputId" class="form-label">ID</label>
+        <input type="number" class="form-control" id="inputId" name="id" [(ngModel)]="model.id">
+      </div>
+  
+      <div class="col-md-4" style="margin: 10px;">
+        <label for="inputNome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="inputNome" name="nome" [(ngModel)]="model.nome">
+      </div>
+      
+      <div class="col-md-2" style="margin: 10px;">
+        <label for="inputQuantidade" class="form-label">Quantidade</label>
+        <input type="text" class="form-control" id="inputQuantidade" name="quantidade" [(ngModel)]="model.quantidade">
+      </div>
+  
+      <div class="col-md-2" style="margin: 10px;">
+        <label for="inputUnidadeMedida" class="form-label">Unidade de Medida</label>
+        <input type="text" class="form-control" id="inputUnidadeMedida" name="unidademedida" [(ngModel)]="model.unidadeMedida">
+      </div>
+  
+      <div class="col-md-2" style="margin: 10px;">
+        <label for="inputPreco" class="form-label">Preço</label>
+        <input type="text" class="form-control" id="inputPreco" name="Preco" [(ngModel)]="model.preco">
+      </div>
+  
+      <div class="col-md-4" style="margin: 10px;">
+        <label for="inputMarca" class="form-label">Marca</label>
+        <input type="marca" class="form-control" id="inputMarca" name="marca" [(ngModel)]="model.marca">
+      </div>      
+    </div>
+
+    <div>
+      <div class="col-12">
+          <button type="submit" class="btn btn-warning" (click)="OnSubmit()" style="margin: 10px;">Cadastrar</button>
+
+          <button type="submit" class="btn btn-warning" [routerLink]="['/produtos']" style="margin: 0px;">Voltar</button>
+      </div>
+    </div>
+  </form>

@@ -1,0 +1,31 @@
+<h3 style="color: black ;">Lista de Produtos</h3>
+<br>
+
+<br />
+<br />
+
+<table class="table table-striped form-control">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Unidade de Medida</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Marca</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let produto of produtos">
+            <td scope="row">{{produto.id}}</td>
+            <td scope="row">{{produto.nome}}</td>
+            <td scope="row">{{produto.quantidade}}</td>
+            <td scope="row">{{produto.unidadeMedida}}</td>
+            <td scope="row">{{produto.preco}}</td>
+            <td scope="row">{{produto.marca}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-success" (click)="cadastrarProduto()">Novo Produto</button>
